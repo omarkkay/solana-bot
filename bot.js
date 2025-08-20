@@ -1,3 +1,13 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Dummy route so Render thinks service is alive
+app.get('/', (req, res) => res.send("🚀 MemeCoin Bot is running on Render"));
+app.listen(PORT, () => {
+  console.log(`Web server running on port ${PORT}`);
+});
+
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
