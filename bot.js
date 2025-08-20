@@ -1,7 +1,8 @@
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
-const token = '8222337426:AAE80YrPYaiaoJ0UCige-6fjeQzG065uH0w';
+// 🔹 Read token from environment variable (set in Render)
+const token = process.env.TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 let chatId = null;
