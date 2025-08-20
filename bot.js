@@ -11,8 +11,7 @@ app.listen(PORT, () => {
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 
-// 🔹 Read token from environment variable (set in Render)
-const token = process.env.TOKEN;
+/const token = process.env.BOT_TOKEN;  // <-- now comes from Render Environment
 const bot = new TelegramBot(token, { polling: true });
 
 let chatId = null;
